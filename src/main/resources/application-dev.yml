@@ -1,0 +1,7 @@
+server:
+  # 服务端口
+  port: 9999
+
+spring:
+  application:
+    name: spectrum
