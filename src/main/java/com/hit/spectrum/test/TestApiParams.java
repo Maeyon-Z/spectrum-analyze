@@ -1,12 +1,23 @@
 package com.hit.spectrum.test;
 
+import javafx.scene.control.DatePicker;
 import lombok.Data;
 
 @Data
 public class TestApiParams {
 
-    private String filePath;
+    private Integer id;
 
-    private Integer operation;
+    private Integer start;
 
+    private Integer end;
+
+    private Double lambdaA;
+
+
+    private Double aC;
+
+    private Double lambdaB;
+
+    private Double alpha;
 }

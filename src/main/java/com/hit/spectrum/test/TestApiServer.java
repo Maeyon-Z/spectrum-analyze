@@ -26,7 +26,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-@RestController
+//@RestController
 @RequestMapping("/spectrum")
 public class TestApiServer {
 
@@ -41,13 +41,13 @@ public class TestApiServer {
     }
 
     //标准品入库测试接口
-    @GetMapping("/test/{id}")
-    public TestApiRes test(@PathVariable("id") Integer id){
+    @PostMapping("/test")
+    public TestApiRes test(@RequestBody TestApiParams params){
         List<String> fileNames = getAllFileNames("/root/spectrum/sampleData");
-        if(id >= fileNames.size()){
+        if(params.getId() >= fileNames.size()){
             return null;
         }
-        String fileName = fileNames.get(id);
+        String fileName = fileNames.get(params.getId());
         TestApiRes res = new TestApiRes();
 
         try {
@@ -65,12 +65,12 @@ public class TestApiServer {
             JSONObject jsonObject = (JSONObject) obj;
             List<Double> xData = jsonObject.getJSONArray("raman_shift").toJavaList(Double.class);
             List<Double> yData = jsonObject.getJSONArray("curve").toJavaList(Double.class);
-            xData = xData.subList(300, 1000);
-            yData = yData.subList(300, 1000);
+            xData = xData.subList(params.getStart(), params.getEnd());
+            yData = yData.subList(params.getStart(), params.getEnd());
             SpectrumData spectrumData = new SpectrumData();
             spectrumData.setCurve(yData);
             spectrumData.setRamanShift(xData);
-            res = pretreatment(spectrumData);
+            res = pretreatment(spectrumData, params);
             inputStream.close();
         }catch (IOException e){
             e.printStackTrace();
@@ -104,24 +104,24 @@ public class TestApiServer {
 
         return fileNames;
     }
-    private static TestApiRes pretreatment(SpectrumData data){
+    private static TestApiRes pretreatment(SpectrumData data, TestApiParams params){
         TestApiRes res = new TestApiRes();
         res.setXData(data.getRamanShift());
         res.setOriginY(data.getCurve());
         // x轴不变
         // 下面是对y轴的处理
         // 1、初步平滑
-        List<Double> smooth = Whittaker.smooth(2.0, data.getCurve(), new ArrayList<>());
+        List<Double> smooth = Whittaker.smooth(params.getLambdaA(), data.getCurve(), new ArrayList<>());
         res.setSm1(smooth);
         // 2、提取背景荧光
-        List<Integer> peakIds = PeakSearch.search(DataConvertUtils.list2Array(smooth), -0.1, 5, 0.2);
-        List<Double> background = Whittaker.smooth(1000.0, data.getCurve(), peakIds);
+        List<Integer> peakIds = PeakSearch.search(DataConvertUtils.list2Array(smooth), params.getAC(), 5, params.getAlpha());
+        List<Double> background = Whittaker.smooth(params.getLambdaB(), data.getCurve(), peakIds);
         res.setBackground(background);
         // 3、消除荧光，校准基线
         List<Double> corrected = Calibration.correct(data.getCurve(), background);
         res.setCorrected(corrected);
         // 4、第二步平滑
-        List<Double> sm2 = Whittaker.smooth(2.0, corrected, new ArrayList<>());
+        List<Double> sm2 = Whittaker.smooth(params.getLambdaA(), corrected, new ArrayList<>());
         // 处理负值
         double min = Collections.min(sm2);
         if(min < 0) {
