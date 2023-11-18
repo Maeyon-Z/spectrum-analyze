@@ -45,8 +45,6 @@ public class SpectrumService {
      * 混合物组分识别
      */
     public double[] identification(SpectrumData mixedData){
-        mixedData = pretreatment(mixedData);
-
         // 混合物数据
         double[] b =  DataConvertUtils.list2Array(mixedData.getCurve());
 

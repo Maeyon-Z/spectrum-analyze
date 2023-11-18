@@ -5,7 +5,7 @@ import lombok.Data;
 import java.util.List;
 
 @Data
-public class JsonTestMixedData {
+public class TestMixedData {
 
     private List<Double> raman_shift;
 

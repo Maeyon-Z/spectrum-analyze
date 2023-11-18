@@ -5,9 +5,366 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ce8af0c8-48bf-4460-946d-d2a718317021" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hit/spectrum/test/CommonScript.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hit/spectrum/test/DbData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hit/spectrum/test/TestScript.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/1-butyl-3-methylimidazolium.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/1-丁基-3-甲基咪唑四氟硼酸盐.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/1-乙基-3-甲基咪唑四氟硼酸盐.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/2,4-二甲基苯甲醇.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/2-疏基乙醇.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/23-二氯苯酚.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/24-二氨基嘧啶.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/3,5二氯苯酚.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/34-二氯苯酚.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/4-Bronodihenyl ether.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/4-hery-iresorunoy.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/4-phenylbutyric acid.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/4-氯苯胺.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/8-Hydroxyquinoline.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/ACS reagent.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/Benzaldehyde.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/Cleanert PSA.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/Cuinaldehyde.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/Cuminaldehyde.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/Diethylamine.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/Fluorene.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/Hexylamine.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/L-丙氨酸.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/L-天冬酰胺.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/L-天门冬氨酸.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/L-异亮氨酸.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/L-脯氨酸.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/Methanesulfonic-acid.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/N-氟二苯磺酰胺.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/N-甲基苄胺.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/NN-二甲基酰胺.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/Oclylamine.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/PBS磷酸盐缓冲液.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/Potassium persulfate.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/Sodium dobecyl sulfate.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/Sodium thiosulfate.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/Suifachlor-opyridazine.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/TNT.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/Tetradecane.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/Tetramethylurea.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/Triacontane.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/copperbromide.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/cylo-sine.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/dihydroxybenzene.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/ferro-cene.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/giycine.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/glutamine.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/l-glutamic acid.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/lead dioxide.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/phenformin hydrochloride.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/piperidinol.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/s-叔丁基-半胱氨酸盐酸盐.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/uricacid.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/丁酮.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/三乙胺.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/三乙醇胺.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/三唑.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/三氟乙酸.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/三（羟甲基）氨基甲烷盐酸盐.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/丙酮.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/乙二胺四乙酸.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/乙磺酸.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/乙腈.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/乙酰丙酮.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/乙酸.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/乙酸乙酯.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/乙酸钴四水合物.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/乙醇.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/乙醇胺.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/乙醚.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/二丁胺.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/二氯甲烷.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/二环己烷.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/二甲基亚矾.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/二甲苯.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/亚硝酸钠.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/亚硫酸.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/亚铁氰化钾(三水).json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/全氟十四酸.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/全氟辛酸.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/六氟异丙醇.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/双硫腙.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/壬二烯原液.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/对氯苯酚.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/对硝基苄醇.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/尿素.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/山梨酸钾.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/异丙醇.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/抗坏血酸.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/无水三氯化铁.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/无水乙醇.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/无水亚铁氰化钾.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/无水硫酸镁.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/无水碳酸钠.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/果酸.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/柠檬酸.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/柠檬黄.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/棕榈酸.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/正丁酸.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/正丁醇.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/正丙酸.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/正丙醇.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/正己烷.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/正戊酸.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/正葵醇.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/正辛酸.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/正辛醇.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/氟化钠.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/氢氧化钾.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/氨三乙酸.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/氨水.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/氯代苯.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/氯化钠.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/氯化钾.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/氯化锂.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/氯化锰(II)四水化合物.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/氯化锶.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/氯苯.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/水溶性淀粉.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/溴化钠.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/溴化钾.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/焦磷酸四钠.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/环丙基苯.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/环己烷.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/甘氨酸.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/甘油磷脂酸钙水合物.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/甘露醇.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/甲基叔丁基醚.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/甲基异丁基甲酮.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/甲苯.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/甲酸.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/甲酸铵.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/甲醇.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/盐酸.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/石英.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/石蜡油.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/硅溶液.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/硝基苯甲醛.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/硝酸.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/硝酸钠.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/硝酸钾.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/硝酸银标准溶液.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/硫酸.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/硫酸二甲酯.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/硫酸亚铁.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/硫酸钙.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/硫酸锌七水.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/硼酸.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/碳酸氢钠.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/碳酸氢钾.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/磷酸二氢钾.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/磷酸二氢铵.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/磷酸氢二钾.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/磷酸盐缓冲液.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/磺胺嘧啶.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/磺胺甲嘧啶.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/磺胺甲恶唑.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/精氨酸.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/纳米铜粉.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/聚氯乙烯.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/聚苯胺.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/肉豆蔻酸.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/芘.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/苯.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/苯甲酸钠.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/苯甲醇.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/苯甲醛.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/蔗糖.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/辛烷磺酸钠.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/过氧化氢.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/酒石酸钾钠.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dbData/钛酸丁酯.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mixedData/mixed_0.5_0.5.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mixedData/mixed_0.8_0.2.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mixedData/mixed_1_1.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hit/spectrum/algo/Filter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hit/spectrum/algo/Filter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hit/spectrum/algo/OLS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hit/spectrum/algo/OLS.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hit/spectrum/data/SpectrumData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hit/spectrum/data/SpectrumData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hit/spectrum/service/SpectrumService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hit/spectrum/service/SpectrumService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hit/spectrum/test/JsonTestMixedData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hit/spectrum/test/TestMixedData.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/hit/spectrum/test/TestApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hit/spectrum/test/TestApi.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/hit/spectrum/test/TestApiParams.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hit/spectrum/test/TestApiParams.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hit/spectrum/test/TestApiServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hit/spectrum/test/TestApiServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/1-butyl-3-methylimidazolium.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/1-butyl-3-methylimidazolium.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/1-丁基-3-甲基咪唑四氟硼酸盐.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/1-丁基-3-甲基咪唑四氟硼酸盐.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/1-乙基-3-甲基咪唑四氟硼酸盐.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/1-乙基-3-甲基咪唑四氟硼酸盐.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/2,4-二甲基苯甲醇.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/2,4-二甲基苯甲醇.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/2-疏基乙醇.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/2-疏基乙醇.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/23-二氯苯酚.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/23-二氯苯酚.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/24-二氨基嘧啶.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/24-二氨基嘧啶.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/3,5二氯苯酚.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/3,5二氯苯酚.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/34-二氯苯酚.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/34-二氯苯酚.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/4-Bronodihenyl ether.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/4-Bronodihenyl ether.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/4-hery-iresorunoy.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/4-hery-iresorunoy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/4-phenylbutyric acid.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/4-phenylbutyric acid.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/4-氯苯胺.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/4-氯苯胺.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/8-Hydroxyquinoline.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/8-Hydroxyquinoline.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/ACS reagent.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/ACS reagent.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/Benzaldehyde.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/Benzaldehyde.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/Cleanert PSA.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/Cleanert PSA.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/Cuinaldehyde.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/Cuinaldehyde.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/Cuminaldehyde.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/Cuminaldehyde.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/Diethylamine.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/Diethylamine.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/Fluorene.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/Fluorene.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/Hexylamine.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/Hexylamine.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/L-丙氨酸.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/L-丙氨酸.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/L-天冬酰胺.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/L-天冬酰胺.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/L-天门冬氨酸.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/L-天门冬氨酸.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/L-异亮氨酸.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/L-异亮氨酸.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/L-脯氨酸.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/L-脯氨酸.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/Methanesulfonic-acid.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/Methanesulfonic-acid.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/N-氟二苯磺酰胺.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/N-氟二苯磺酰胺.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/N-甲基苄胺.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/N-甲基苄胺.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/NN-二甲基酰胺.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/NN-二甲基酰胺.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/Oclylamine.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/Oclylamine.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/PBS磷酸盐缓冲液.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/PBS磷酸盐缓冲液.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/Potassium persulfate.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/Potassium persulfate.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/Sodium dobecyl sulfate.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/Sodium dobecyl sulfate.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/Sodium thiosulfate.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/Sodium thiosulfate.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/Suifachlor-opyridazine.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/Suifachlor-opyridazine.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/TNT.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/TNT.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/Tetradecane.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/Tetradecane.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/Tetramethylurea.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/Tetramethylurea.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/Triacontane.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/Triacontane.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/copperbromide.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/copperbromide.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/cylo-sine.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/cylo-sine.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/dihydroxybenzene.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/dihydroxybenzene.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/ferro-cene.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/ferro-cene.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/giycine.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/giycine.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/glutamine.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/glutamine.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/l-glutamic acid.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/l-glutamic acid.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/lead dioxide.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/lead dioxide.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/phenformin hydrochloride.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/phenformin hydrochloride.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/piperidinol.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/piperidinol.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/s-叔丁基-半胱氨酸盐酸盐.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/s-叔丁基-半胱氨酸盐酸盐.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/uricacid.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/uricacid.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/丁酮.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/丁酮.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/三乙胺.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/三乙胺.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/三乙醇胺.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/三乙醇胺.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/三唑.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/三唑.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/三氟乙酸.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/三氟乙酸.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/三（羟甲基）氨基甲烷盐酸盐.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/三（羟甲基）氨基甲烷盐酸盐.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/丙酮.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/丙酮.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/乙二胺四乙酸.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/乙二胺四乙酸.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/乙磺酸.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/乙磺酸.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/乙腈.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/乙腈.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/乙酰丙酮.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/乙酰丙酮.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/乙酸.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/乙酸.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/乙酸乙酯.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/乙酸乙酯.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/乙酸钴四水合物.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/乙酸钴四水合物.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/乙醇.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/乙醇.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/乙醇胺.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/乙醇胺.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/乙醚.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/乙醚.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/二丁胺.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/二丁胺.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/二氯甲烷.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/二氯甲烷.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/二环己烷.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/二环己烷.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/二甲基亚矾.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/二甲基亚矾.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/二甲苯.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/二甲苯.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/亚硝酸钠.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/亚硝酸钠.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/亚硫酸.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/亚硫酸.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/亚铁氰化钾(三水).json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/亚铁氰化钾(三水).json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/全氟十四酸.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/全氟十四酸.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/全氟辛酸.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/全氟辛酸.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/六氟异丙醇.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/六氟异丙醇.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/双硫腙.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/双硫腙.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/壬二烯原液.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/壬二烯原液.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/对氯苯酚.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/对氯苯酚.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/对硝基苄醇.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/对硝基苄醇.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/尿素.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/尿素.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/山梨酸钾.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/山梨酸钾.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/异丙醇.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/异丙醇.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/抗坏血酸.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/抗坏血酸.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/无水三氯化铁.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/无水三氯化铁.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/无水乙醇.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/无水乙醇.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/无水亚铁氰化钾.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/无水亚铁氰化钾.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/无水硫酸镁.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/无水硫酸镁.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/无水碳酸钠.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/无水碳酸钠.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/果酸.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/果酸.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/柠檬酸.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/柠檬酸.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/柠檬黄.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/柠檬黄.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/棕榈酸.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/棕榈酸.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/正丁酸.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/正丁酸.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/正丁醇.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/正丁醇.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/正丙酸.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/正丙酸.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/正丙醇.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/正丙醇.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/正己烷.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/正己烷.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/正戊酸.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/正戊酸.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/正葵醇.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/正葵醇.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/正辛酸.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/正辛酸.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/正辛醇.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/正辛醇.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/氟化钠.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/氟化钠.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/氢氧化钾.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/氢氧化钾.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/氨三乙酸.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/氨三乙酸.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/氨水.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/氨水.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/氯代苯.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/氯代苯.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/氯化钠.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/氯化钠.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/氯化钾.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/氯化钾.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/氯化锂.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/氯化锂.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/氯化锰(II)四水化合物.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/氯化锰(II)四水化合物.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/氯化锶.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/氯化锶.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/氯苯.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/氯苯.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/水溶性淀粉.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/水溶性淀粉.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/溴化钠.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/溴化钠.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/溴化钾.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/溴化钾.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/焦磷酸四钠.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/焦磷酸四钠.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/环丙基苯.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/环丙基苯.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/环己烷.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/环己烷.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/甘氨酸.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/甘氨酸.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/甘油磷脂酸钙水合物.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/甘油磷脂酸钙水合物.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/甘露醇.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/甘露醇.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/甲基叔丁基醚.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/甲基叔丁基醚.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/甲基异丁基甲酮.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/甲基异丁基甲酮.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/甲苯.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/甲苯.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/甲酸.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/甲酸.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/甲酸铵.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/甲酸铵.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/甲醇.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/甲醇.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/盐酸.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/盐酸.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/石英.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/石英.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/石蜡油.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/石蜡油.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/硅溶液.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/硅溶液.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/硝基苯甲醛.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/硝基苯甲醛.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/硝酸.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/硝酸.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/硝酸钠.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/硝酸钠.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/硝酸钾.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/硝酸钾.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/硝酸银标准溶液.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/硝酸银标准溶液.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/硫酸.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/硫酸.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/硫酸二甲酯.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/硫酸二甲酯.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/硫酸亚铁.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/硫酸亚铁.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/硫酸钙.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/硫酸钙.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/硫酸锌七水.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/硫酸锌七水.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/硼酸.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/硼酸.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/碳酸氢钠.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/碳酸氢钠.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/碳酸氢钾.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/碳酸氢钾.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/磷酸二氢钾.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/磷酸二氢钾.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/磷酸二氢铵.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/磷酸二氢铵.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/磷酸氢二钾.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/磷酸氢二钾.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/磷酸盐缓冲液.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/磷酸盐缓冲液.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/磺胺嘧啶.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/磺胺嘧啶.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/磺胺甲嘧啶.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/磺胺甲嘧啶.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/磺胺甲恶唑.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/磺胺甲恶唑.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/精氨酸.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/精氨酸.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/纳米铜粉.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/纳米铜粉.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/聚氯乙烯.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/聚氯乙烯.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/聚苯胺.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/聚苯胺.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/肉豆蔻酸.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/肉豆蔻酸.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/芘.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/芘.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/苯.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/苯.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/苯甲酸钠.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/苯甲酸钠.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/苯甲醇.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/苯甲醇.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/苯甲醛.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/苯甲醛.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/蔗糖.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/蔗糖.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/辛烷磺酸钠.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/辛烷磺酸钠.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/过氧化氢.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/过氧化氢.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/酒石酸钾钠.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/酒石酸钾钠.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/钛酸丁酯.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/钛酸丁酯.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,9 +423,22 @@
       <recent name="$PROJECT_DIR$/src/main/java/com/hit/spectrum/test" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.Main">
-    <configuration name="Identification" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.hit.spectrum.algo.Identification" />
+  <component name="RunManager" selected="Application.TestScript">
+    <configuration name="IdentificationScript" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.hit.spectrum.test.IdentificationScript" />
+      <module name="spectrum" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.hit.spectrum.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OLS" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.hit.spectrum.algo.OLS" />
       <module name="spectrum" />
       <extension name="coverage">
         <pattern>
@@ -80,25 +450,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SpectrumService" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.hit.spectrum.service.SpectrumService" />
-      <module name="spectrum" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.hit.spectrum.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="TestApi" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.hit.spectrum.TestApi" />
+      <option name="MAIN_CLASS_NAME" value="com.hit.spectrum.test.TestApi" />
       <module name="spectrum" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.hit.spectrum.*" />
+          <option name="PATTERN" value="com.hit.spectrum.test.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -106,8 +463,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="com.hit.spectrum.test.TestApi" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.hit.spectrum.test.TestApi" />
+    <configuration name="TestScript" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.hit.spectrum.test.TestScript" />
       <module name="spectrum" />
       <extension name="coverage">
         <pattern>
@@ -134,11 +491,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.TestScript" />
         <item itemvalue="Spring Boot.Main" />
+        <item itemvalue="Application.OLS" />
+        <item itemvalue="Application.IdentificationScript" />
         <item itemvalue="Application.com.hit.spectrum.test.TestApi" />
-        <item itemvalue="Application.SpectrumService" />
-        <item itemvalue="Application.TestApi" />
-        <item itemvalue="Application.Identification" />
       </list>
     </recent_temporary>
   </component>
@@ -165,7 +522,7 @@
       <workItem from="1700015676070" duration="7667000" />
       <workItem from="1700133955995" duration="10239000" />
       <workItem from="1700182301361" duration="41000" />
-      <workItem from="1700182365135" duration="2744000" />
+      <workItem from="1700182365135" duration="35619000" />
     </task>
     <servers />
   </component>
@@ -180,11 +537,25 @@
           <line>371</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/hit/spectrum/test/TestScript.java</url>
+          <line>140</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/hit/spectrum/test/TestApi.java</url>
+          <line>162</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
       <configuration name="SpringBootApplicationConfigurationType">
         <watch expression="sm2.get(1)" />
+      </configuration>
+      <configuration name="Application">
+        <watch expression="t[0]" language="JAVA" />
+        <watch expression="delta[3]" />
       </configuration>
     </watches-manager>
   </component>

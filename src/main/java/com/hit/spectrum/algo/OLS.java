@@ -2,10 +2,7 @@ package com.hit.spectrum.algo;
 
 import org.apache.commons.math3.analysis.MultivariateFunction;
 import org.apache.commons.math3.analysis.MultivariateVectorFunction;
-import org.apache.commons.math3.linear.Array2DRowRealMatrix;
-import org.apache.commons.math3.linear.ArrayRealVector;
-import org.apache.commons.math3.linear.RealMatrix;
-import org.apache.commons.math3.linear.RealVector;
+import org.apache.commons.math3.linear.*;
 import org.apache.commons.math3.optim.InitialGuess;
 import org.apache.commons.math3.optim.MaxEval;
 import org.apache.commons.math3.optim.PointValuePair;
@@ -36,9 +33,35 @@ public class OLS {
 
     private static double[] getInitialGuess(int m){
         double[] res = new double[m];
-        Arrays.fill(res, 1.0);
+        Arrays.fill(res, 0.3);
         return res;
     }
+
+    private static double[] getInitialGuess1(double[] b, double[][] A){
+        double[] res0 = new double[A.length];
+        Arrays.fill(res0, 0.3);
+//        if(A.length > 1) res[1] = 0.9;
+        return res0;
+//        double max = 0, min = Double.MAX_VALUE;
+//        for(int i = 0; i < A.length; i++){
+//            res0[i] = 0;
+//            for(int j = 0; j < b.length; j++){
+//                res0[i] += Math.abs(b[j] - A[i][j]);
+//            }
+//            max = Math.max(max, res0[i]);
+//            min = Math.min(min, res0[i]);
+//        }
+//        double[] res1 = new double[A.length];
+//        for(int i = 0; i < res0.length; i++){
+//            res1[i] = res0[i] / max;
+//        }
+//        double[] res2 = new double[A.length];
+//        for(int i = 0; i < res0.length; i++){
+//            res2[i] = 1 - res1[i];
+//        }
+//        return res2;
+    }
+
     private static MultivariateFunction getObjectiveFunction(RealMatrix matrixA, RealVector vectorB, double lmd, boolean isIter){
         MultivariateFunction objectiveFunction;
         if(isIter){
@@ -93,25 +116,26 @@ public class OLS {
 
         // 定义目标函数
         MultivariateFunction objectiveFunction = getObjectiveFunction(matrixA, vectorB, lmd, isIter);
-
         // 定义目标函数的梯度
         MultivariateVectorFunction gradientFunction = getGradFunction(matrixA, vectorB, lmd, isIter);
-
 
         GradientMultivariateOptimizer optimizer = new NonLinearConjugateGradientOptimizer(
                 NonLinearConjugateGradientOptimizer.Formula.POLAK_RIBIERE, // 使用 Polak-Ribiere 公式
                 new SimpleValueChecker(1e-3, 1e-3) // 设置收敛判据
         );
 
+        double[] init = getInitialGuess1(b, A);
+
         PointValuePair res = optimizer.optimize(
-                new MaxEval(10000), // 最大迭代次数
+                new MaxEval(2000000), // 最大迭代次数
                 new ObjectiveFunction(objectiveFunction),
                 new ObjectiveFunctionGradient(gradientFunction), // 应用梯度函数
                 getNonnegativityConstraints(A.length),//通过线性约束的形式定义非负约束
                 GoalType.MINIMIZE,
-                new InitialGuess(getInitialGuess(A.length)) // 设置初始猜测
+                new InitialGuess(init) // 设置初始猜测
         );
 
         return res.getPoint();
     }
+
 }
