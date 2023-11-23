@@ -64,12 +64,12 @@ public class CommonScript {
     }
 
     public static List<DbData> loadDbData(){
-        List<String> fileNames = getAllFileNames("/Users/zmy/Project/spectrum_analysis/spectrum/src/main/resources/dbData");
+        List<String> fileNames = getAllFileNames("/Users/zmy/Project/spectrum_analysis/spectrum/src/main/resources/dbData_fix_param_peak");
         List<DbData> res = new ArrayList<>();
 //        double[][] res = new double[fileNames.size()][];
         for(String fileName : fileNames){
             try {
-                String filePath = "/Users/zmy/Project/spectrum_analysis/spectrum/src/main/resources/dbData/" + fileName;
+                String filePath = "/Users/zmy/Project/spectrum_analysis/spectrum/src/main/resources/dbData_fix_param_peak/" + fileName;
                 InputStream inputStream = Files.newInputStream(Paths.get(filePath));
 
                 // 读取 JSON 文件内容
@@ -110,5 +110,15 @@ public class CommonScript {
 
         //通过 T 检验筛选疑似物质
         return Filter.filterByT(x, A, b);
+    }
+
+    public static List<Double> savePeak(List<Double> sm2, TestApiParams params){
+        List<Integer> peakIds2 = PeakSearch.search(DataConvertUtils.list2Array(sm2), params.getAC(), 5, params.getAlpha());
+        List<Double> dbData = new ArrayList<>();
+        for (int i = 0; i < sm2.size(); i++){
+            if(peakIds2.contains(i) && i >= 1 && sm2.get(i-1) < sm2.get(i) && sm2.get(i+1) < sm2.get(i)) dbData.add(sm2.get(i));
+            else dbData.add(0.0);
+        }
+        return dbData;
     }
 }

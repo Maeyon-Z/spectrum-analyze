@@ -23,4 +23,5 @@ public class TestApiRes {
 
     private List<Double> yData;
 
+    private List<Double> dbData;
 }

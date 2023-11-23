@@ -1,8 +1,10 @@
 package com.hit.spectrum.service;
 
 import com.hit.spectrum.algo.*;
+import com.hit.spectrum.config.Params;
 import com.hit.spectrum.data.SpectrumData;
 import com.hit.spectrum.data.DataConvertUtils;
+import com.hit.spectrum.test.TestApiParams;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -17,14 +19,14 @@ public class SpectrumService {
         res.setRamanShift(data.getRamanShift());
         // 下面是对y轴的处理
         // 1、初步平滑
-        List<Double> smooth = Whittaker.smooth(2.0, data.getCurve(), new ArrayList<>());
+        List<Double> smooth = Whittaker.smooth(Params.lambdaA, data.getCurve(), new ArrayList<>());
         // 2、提取背景荧光
-        List<Integer> peakIds = PeakSearch.search(DataConvertUtils.list2Array(smooth), -0.1, 5, 0.2);
-        List<Double> background = Whittaker.smooth(1000.0, data.getCurve(), peakIds);
+        List<Integer> peakIds = PeakSearch.search(DataConvertUtils.list2Array(smooth), Params.ac, Params.width, Params.alpha);
+        List<Double> background = Whittaker.smooth(Params.lambdaB, data.getCurve(), peakIds);
         // 3、消除荧光，校准基线
         List<Double> corrected = Calibration.correct(data.getCurve(), background);
         // 4、第二步平滑
-        List<Double> sm2 = Whittaker.smooth(2.0, corrected, new ArrayList<>());
+        List<Double> sm2 = Whittaker.smooth(Params.lambdaA, corrected, new ArrayList<>());
         // 处理负值
         double min = Collections.min(sm2);
         if(min < 0) {
@@ -34,12 +36,22 @@ public class SpectrumService {
         return res;
     }
 
+    public static List<Double> savePeak(List<Double> sm2, List<Integer> peakIds){
+        List<Double> dbData = new ArrayList<>();
+        for (int i = 0; i < sm2.size(); i++){
+            if(peakIds.contains(i) && i >= 1 && sm2.get(i-1) < sm2.get(i) && sm2.get(i+1) < sm2.get(i)) dbData.add(sm2.get(i));
+            else dbData.add(0.0);
+        }
+        return dbData;
+    }
+
     public boolean enterStandard(SpectrumData data){
         data = pretreatment(data);
+        List<Integer> peakIds = PeakSearch.search(DataConvertUtils.list2Array(data.getCurve()),  Params.ac, Params.width, Params.alpha);
+        data.setCurve(savePeak(data.getCurve(), peakIds));
         // todo data入库
         return true;
     }
-
 
     /**
      * 混合物组分识别

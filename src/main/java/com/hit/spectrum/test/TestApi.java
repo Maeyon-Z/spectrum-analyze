@@ -25,6 +25,7 @@ import java.nio.file.attribute.BasicFileAttributes;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Set;
 
 @RestController
 @RequestMapping("/spectrum")
@@ -65,13 +66,26 @@ public class TestApi {
             Object obj = jsonArray.get(0);
             JSONObject jsonObject = (JSONObject) obj;
             List<Double> xData = jsonObject.getJSONArray("raman_shift").toJavaList(Double.class);
-            List<Double> yData = jsonObject.getJSONArray("norm_curve").toJavaList(Double.class);
+            List<Double> yData = jsonObject.getJSONArray("curve").toJavaList(Double.class);
             xData = xData.subList(params.getStart(), params.getEnd());
             yData = yData.subList(params.getStart(), params.getEnd());
             SpectrumData spectrumData = new SpectrumData();
             spectrumData.setCurve(yData);
             spectrumData.setRamanShift(xData);
             res = pretreatment(spectrumData, params);
+
+            String filePath1 = "dbData_fix_param_peak/" + fileName;
+            ClassPathResource classPathResource1 = new ClassPathResource(filePath1);
+            InputStream inputStream1 = classPathResource1.getInputStream();
+
+            // 读取 JSON 文件内容
+            byte[] bytes1 = new byte[inputStream1.available()];
+            inputStream1.read(bytes1);
+            // 使用 FastJSON 解析 JSON 文件
+            String jsonContent1 = new String(bytes1, StandardCharsets.UTF_8);
+            JSONObject jsonObject1 = JSONObject.parseObject(jsonContent1);
+            res.setDbData(jsonObject1.getJSONArray("curve").toJavaList(Double.class));
+
             inputStream.close();
         }catch (IOException e){
             e.printStackTrace();
@@ -122,50 +136,6 @@ public class TestApi {
             sm2.replaceAll(aDouble -> aDouble - min);
         }
         res.setSm2(sm2);
-        return res;
-    }
-
-
-    @GetMapping("/testDb/{id}")
-    public TestApiRes testDb(@PathVariable("id") Integer id){
-        List<String> fileNames = getAllSampleData();
-        String fileName = fileNames.get(id);
-        TestApiRes res = new TestApiRes();
-        try {
-            String filePath = "sampleData/" + fileName;
-            ClassPathResource classPathResource = new ClassPathResource(filePath);
-            InputStream inputStream = classPathResource.getInputStream();
-
-            // 读取 JSON 文件内容
-            byte[] bytes = new byte[inputStream.available()];
-            inputStream.read(bytes);
-            // 使用 FastJSON 解析 JSON 文件
-            String jsonContent = new String(bytes, StandardCharsets.UTF_8);
-            JSONArray jsonArray = JSONArray.parseArray(jsonContent, Feature.OrderedField);
-
-            Object obj = jsonArray.get(0);
-            JSONObject jsonObject = (JSONObject) obj;
-            List<Double> xData = jsonObject.getJSONArray("raman_shift").toJavaList(Double.class);
-            List<Double> yData = jsonObject.getJSONArray("curve").toJavaList(Double.class);
-            res.setXData(xData.subList(200, 1000));
-            res.setOriginY(yData.subList(200, 1000));
-            inputStream.close();
-
-            String filePath1 = "dbData/" + fileName;
-            ClassPathResource classPathResource1 = new ClassPathResource(filePath1);
-            InputStream inputStream1 = classPathResource1.getInputStream();
-
-            // 读取 JSON 文件内容
-            byte[] bytes1 = new byte[inputStream1.available()];
-            inputStream1.read(bytes1);
-            // 使用 FastJSON 解析 JSON 文件
-            String jsonContent1 = new String(bytes1, StandardCharsets.UTF_8);
-            JSONObject jsonObject1 = JSONObject.parseObject(jsonContent1);
-            res.setSm2(jsonObject1.getJSONArray("curve").toJavaList(Double.class));
-            inputStream1.close();
-        }catch (IOException e){
-            e.printStackTrace();
-        }
         return res;
     }
 

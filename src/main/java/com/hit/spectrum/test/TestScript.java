@@ -4,6 +4,8 @@ import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import com.alibaba.fastjson.parser.Feature;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.hit.spectrum.algo.PeakSearch;
+import com.hit.spectrum.data.DataConvertUtils;
 import com.hit.spectrum.data.SpectrumData;
 
 import java.io.File;
@@ -15,7 +17,7 @@ import java.util.List;
 
 public class TestScript {
 
-    private static TestApiParams params = TestApiParams.build(100, 2000, 2.00, 1000.00, -0.1, 0.2);
+    private static TestApiParams params = TestApiParams.build(30, 2048, 6.60, 1000.00, -0.1, 0.05);
 
     public static void generateDbData(){
         List<String> fileNames = CommonScript.getAllFileNames("/Users/zmy/Project/spectrum_analysis/spectrum/src/main/resources/sampleData");
@@ -35,7 +37,7 @@ public class TestScript {
                 Object obj = jsonArray.get(0);
                 JSONObject jsonObject = (JSONObject) obj;
                 List<Double> xData = jsonObject.getJSONArray("raman_shift").toJavaList(Double.class);
-                List<Double> yData = jsonObject.getJSONArray("norm_curve").toJavaList(Double.class);
+                List<Double> yData = jsonObject.getJSONArray("curve").toJavaList(Double.class);
 
                 SpectrumData spectrumData = new SpectrumData();
                 spectrumData.setCurve(yData.subList(params.getStart(), params.getEnd()));
@@ -44,10 +46,10 @@ public class TestScript {
                 SpectrumData res = new SpectrumData();
                 res.setRamanShift(xData.subList(params.getStart(), params.getEnd()));
                 res.setName(fileName);
-                res.setCurve(CommonScript.pretreatment(spectrumData, params));
+                res.setCurve(CommonScript.savePeak(CommonScript.pretreatment(spectrumData, params), params));
 
                 ObjectMapper objectMapper = new ObjectMapper();
-                objectMapper.writeValue(new File("/Users/zmy/Project/spectrum_analysis/spectrum/src/main/resources/dbDataNorm/" + fileName), res);
+                objectMapper.writeValue(new File("/Users/zmy/Project/spectrum_analysis/spectrum/src/main/resources/dbData_fix_param_peak/" + fileName), res);
 
                 inputStream.close();
             }catch (IOException e){
@@ -58,9 +60,9 @@ public class TestScript {
     }
 
     private static void testIdentification(){
-        List<String> fileNames = CommonScript.getAllFileNames("/Users/zmy/Project/spectrum_analysis/spectrum/src/main/resources/sampleData");
-        String fileName = fileNames.get(1);
-        String filePath = "/Users/zmy/Project/spectrum_analysis/spectrum/src/main/resources/sampleData/" + fileName;
+        List<String> fileNames = CommonScript.getAllFileNames("/Users/zmy/Project/spectrum_analysis/spectrum/src/main/resources/mixedData");
+        String fileName = fileNames.get(2);
+        String filePath = "/Users/zmy/Project/spectrum_analysis/spectrum/src/main/resources/mixedData/" + fileName;
         try {
             // 1. 加载混合物数据
             InputStream inputStream = Files.newInputStream(Paths.get(filePath));
@@ -72,19 +74,21 @@ public class TestScript {
             JSONObject jsonObject = (JSONObject) obj;
             List<Double> xData = jsonObject.getJSONArray("raman_shift").toJavaList(Double.class);
             List<Double> yData = jsonObject.getJSONArray("curve").toJavaList(Double.class);
-//            List<String> mixedName = jsonObject.getJSONArray("name").toJavaList(String.class);
-            String mixedName = jsonObject.getString("name");
+            List<String> mixedName = jsonObject.getJSONArray("name").toJavaList(String.class);
+//            String mixedName = jsonObject.getString("name");
 
             SpectrumData spectrumData = new SpectrumData(xData.subList(params.getStart(), params.getEnd()),
-                    yData.subList(params.getStart(), params.getEnd()), mixedName);
+                    yData.subList(params.getStart(), params.getEnd()), mixedName.toString());
 
             SpectrumData mixedData = new SpectrumData(xData.subList(params.getStart(), params.getEnd()),
-                    CommonScript.pretreatment(spectrumData, params), mixedName);
+                    CommonScript.pretreatment(spectrumData, params), mixedName.toString());
+
+            mixedData.setCurve(CommonScript.savePeak(mixedData.getCurve(), params));
 
             // 2. 组分识别
             double[] res = CommonScript.identification(mixedData);
 
-            List<String> dbNames = CommonScript.getAllFileNames("/Users/zmy/Project/spectrum_analysis/spectrum/src/main/resources/dbData");
+            List<String> dbNames = CommonScript.getAllFileNames("/Users/zmy/Project/spectrum_analysis/spectrum/src/main/resources/dbData_fix_param_peak");
             for(int i = 0; i < res.length; i++){
                 if(res[i] != 0){
                     System.out.println(i + "-" + res[i] + "-" + dbNames.get(i));

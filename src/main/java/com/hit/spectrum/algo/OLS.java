@@ -39,8 +39,8 @@ public class OLS {
 
     private static double[] getInitialGuess1(double[] b, double[][] A){
         double[] res0 = new double[A.length];
-        Arrays.fill(res0, 0.3);
-//        if(A.length > 1) res[1] = 0.9;
+        Arrays.fill(res0, 1);
+//        if(A.length > 1) res0[1] = 0.9;
         return res0;
 //        double max = 0, min = Double.MAX_VALUE;
 //        for(int i = 0; i < A.length; i++){
