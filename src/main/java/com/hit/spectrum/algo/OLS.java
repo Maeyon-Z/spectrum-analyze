@@ -31,35 +31,10 @@ public class OLS {
         return new LinearConstraintSet(res);
     }
 
-    private static double[] getInitialGuess(int m){
-        double[] res = new double[m];
-        Arrays.fill(res, 0.3);
+    private static double[] getInitialGuess(double[] b, double[][] A){
+        double[] res = new double[A.length];
+        Arrays.fill(res, 1);
         return res;
-    }
-
-    private static double[] getInitialGuess1(double[] b, double[][] A){
-        double[] res0 = new double[A.length];
-        Arrays.fill(res0, 1);
-//        if(A.length > 1) res0[1] = 0.9;
-        return res0;
-//        double max = 0, min = Double.MAX_VALUE;
-//        for(int i = 0; i < A.length; i++){
-//            res0[i] = 0;
-//            for(int j = 0; j < b.length; j++){
-//                res0[i] += Math.abs(b[j] - A[i][j]);
-//            }
-//            max = Math.max(max, res0[i]);
-//            min = Math.min(min, res0[i]);
-//        }
-//        double[] res1 = new double[A.length];
-//        for(int i = 0; i < res0.length; i++){
-//            res1[i] = res0[i] / max;
-//        }
-//        double[] res2 = new double[A.length];
-//        for(int i = 0; i < res0.length; i++){
-//            res2[i] = 1 - res1[i];
-//        }
-//        return res2;
     }
 
     private static MultivariateFunction getObjectiveFunction(RealMatrix matrixA, RealVector vectorB, double lmd, boolean isIter){
@@ -110,6 +85,7 @@ public class OLS {
         }
         return gradientFunction;
     }
+
     public static double[] operate(double[][] A, double[] b, double lmd, boolean isIter){
         RealMatrix matrixA = new Array2DRowRealMatrix(A);
         RealVector vectorB = new ArrayRealVector(b);
@@ -124,7 +100,7 @@ public class OLS {
                 new SimpleValueChecker(1e-3, 1e-3) // 设置收敛判据
         );
 
-        double[] init = getInitialGuess1(b, A);
+        double[] init = getInitialGuess(b, A);
 
         PointValuePair res = optimizer.optimize(
                 new MaxEval(2000000), // 最大迭代次数

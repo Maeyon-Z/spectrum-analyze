@@ -6,6 +6,8 @@ import lombok.Data;
 @Data
 public class TestApiParams {
 
+    private String fileName;
+
     private Integer id;
 
     private Integer start;

@@ -1,5 +1,6 @@
 package com.hit.spectrum.test;
 
+import com.hit.spectrum.data.SpectrumData;
 import lombok.Data;
 
 import java.util.List;
@@ -24,4 +25,6 @@ public class TestApiRes {
     private List<Double> yData;
 
     private List<Double> dbData;
+
+    List<SpectrumDataTest> idenData;
 }

@@ -31,28 +31,22 @@ import java.util.Set;
 @RequestMapping("/spectrum")
 public class TestApi {
 
-    private SpectrumService service = new SpectrumService();
-
-    @GetMapping("/getAllData")
-    public List<SampleName> getAllData(){
+    @GetMapping("/getAllData/{type}")
+    public List<SampleName> getAllData(@PathVariable("type") Integer type){
         List<SampleName> res = new ArrayList<>();
-        List<String> fileNames = getAllSampleData();
+        List<String> fileNames = getAllFileName(type);
         for (int i = 0; i < fileNames.size(); i++){
             res.add(new SampleName(i, fileNames.get(i)));
         }
         return res;
     }
 
-    @PostMapping("/test")
-    public TestApiRes test(@RequestBody TestApiParams params){
-        List<String> fileNames = getAllSampleData();
-        if(params.getId() >= fileNames.size()){
-            return null;
-        }
-        String fileName = fileNames.get(params.getId());
+    @PostMapping("/test/{type}")
+    public TestApiRes test(@RequestBody TestApiParams params, @PathVariable("type") Integer type){
+        String fileName = params.getFileName();
         TestApiRes res = new TestApiRes();
         try {
-            String filePath = "sampleData/" + fileName;
+            String filePath = type == 1 ? "sampleData/" + fileName : "mixedData/" + fileName;
             ClassPathResource classPathResource = new ClassPathResource(filePath);
             InputStream inputStream = classPathResource.getInputStream();
 
@@ -73,34 +67,100 @@ public class TestApi {
             spectrumData.setCurve(yData);
             spectrumData.setRamanShift(xData);
             res = pretreatment(spectrumData, params);
-
-            String filePath1 = "dbData_fix_param_peak/" + fileName;
-            ClassPathResource classPathResource1 = new ClassPathResource(filePath1);
-            InputStream inputStream1 = classPathResource1.getInputStream();
-
-            // 读取 JSON 文件内容
-            byte[] bytes1 = new byte[inputStream1.available()];
-            inputStream1.read(bytes1);
-            // 使用 FastJSON 解析 JSON 文件
-            String jsonContent1 = new String(bytes1, StandardCharsets.UTF_8);
-            JSONObject jsonObject1 = JSONObject.parseObject(jsonContent1);
-            res.setDbData(jsonObject1.getJSONArray("curve").toJavaList(Double.class));
-
             inputStream.close();
+
+            if(type == 1){
+                String filePath1 = "dbData_fix_param_peak_2/" + fileName;
+                ClassPathResource classPathResource1 = new ClassPathResource(filePath1);
+                InputStream inputStream1 = classPathResource1.getInputStream();
+
+                // 读取 JSON 文件内容
+                byte[] bytes1 = new byte[inputStream1.available()];
+                inputStream1.read(bytes1);
+                // 使用 FastJSON 解析 JSON 文件
+                String jsonContent1 = new String(bytes1, StandardCharsets.UTF_8);
+                JSONObject jsonObject1 = JSONObject.parseObject(jsonContent1);
+                res.setDbData(jsonObject1.getJSONArray("curve").toJavaList(Double.class));
+                inputStream1.close();
+            }else{
+                res.setDbData(CommonScript.savePeak(res.getSm2(), params));
+            }
         }catch (IOException e){
             e.printStackTrace();
         }
         return res;
     }
 
-    private List<String> getAllSampleData(){
+    @PostMapping("/iden")
+    public TestApiRes iden(@RequestBody TestApiParams params){
+        String fileName = params.getFileName();
+        TestApiRes res = new TestApiRes();
+        try {
+            String filePath = "mixedData/" + fileName;
+            ClassPathResource classPathResource = new ClassPathResource(filePath);
+            InputStream inputStream = classPathResource.getInputStream();
+
+            // 读取 JSON 文件内容
+            byte[] bytes = new byte[inputStream.available()];
+            inputStream.read(bytes);
+            // 使用 FastJSON 解析 JSON 文件
+            String jsonContent = new String(bytes, StandardCharsets.UTF_8);
+            JSONArray jsonArray = JSONArray.parseArray(jsonContent, Feature.OrderedField);
+
+            Object obj = jsonArray.get(0);
+            JSONObject jsonObject = (JSONObject) obj;
+            List<Double> xData = jsonObject.getJSONArray("raman_shift").toJavaList(Double.class);
+            List<Double> yData = jsonObject.getJSONArray("curve").toJavaList(Double.class);
+            xData = xData.subList(params.getStart(), params.getEnd());
+            yData = yData.subList(params.getStart(), params.getEnd());
+            SpectrumData spectrumData = new SpectrumData();
+            spectrumData.setCurve(yData);
+            spectrumData.setRamanShift(xData);
+            res = pretreatment(spectrumData, params);
+            inputStream.close();
+
+            res.setDbData(CommonScript.savePeak(res.getSm2(), params));
+
+            spectrumData.setCurve(res.getDbData());
+            spectrumData.setRamanShift(xData);
+            spectrumData.setName(fileName);
+            double[] idenRes = CommonScript.identification(spectrumData);
+
+            List<String> dbNames = CommonScript.getAllFileNames("/Users/zmy/Project/spectrum_analysis/spectrum/src/main/resources/dbData_fix_param_peak_2");
+            res.setIdenData(new ArrayList<>());
+            for(int i = 0; i < idenRes.length; i++){
+                if(idenRes[i] != 0){
+                    String filePath1 = "dbData_fix_param_peak_2/" + dbNames.get(i);
+                    ClassPathResource classPathResource1 = new ClassPathResource(filePath1);
+                    InputStream inputStream1 = classPathResource1.getInputStream();
+
+                    // 读取 JSON 文件内容
+                    byte[] bytes1 = new byte[inputStream1.available()];
+                    inputStream1.read(bytes1);
+                    // 使用 FastJSON 解析 JSON 文件
+                    String jsonContent1 = new String(bytes1, StandardCharsets.UTF_8);
+                    JSONObject jsonObject1 = JSONObject.parseObject(jsonContent1);
+
+                    List<Double> xData1 = jsonObject1.getJSONArray("ramanShift").toJavaList(Double.class);
+                    List<Double> yData1 = jsonObject1.getJSONArray("curve").toJavaList(Double.class);
+                    res.idenData.add(new SpectrumDataTest(xData1, yData1, dbNames.get(i), idenRes[i]));
+                }
+            }
+
+        }catch (IOException e){
+            e.printStackTrace();
+        }
+        return res;
+    }
+
+    private List<String> getAllFileName(Integer type){
         List<String> res = new ArrayList<>();
         try {
             // 获取资源解析器
             ResourcePatternResolver resolver = new PathMatchingResourcePatternResolver();
 
             // 使用相对路径获取resources目录下所有文件
-            Resource[] resources = resolver.getResources("classpath:sampleData/**");
+            Resource[] resources = type == 1 ? resolver.getResources("classpath:sampleData/**") : resolver.getResources("classpath:mixedData/**");
 
             // 遍历输出文件名
             for (Resource resource : resources) {
