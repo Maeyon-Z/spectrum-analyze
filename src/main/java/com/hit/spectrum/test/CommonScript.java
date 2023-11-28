@@ -92,7 +92,7 @@ public class CommonScript {
     }
 
     public static double[] identification(SpectrumData mixedData){
-        // 混合物数据wd
+        // 混合物数据
         double[] b =  DataConvertUtils.list2Array(mixedData.getCurve());
 
         // 标准品数据

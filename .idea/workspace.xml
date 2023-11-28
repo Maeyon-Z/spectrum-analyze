@@ -5,28 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ce8af0c8-48bf-4460-946d-d2a718317021" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hit/spectrum/test/SpectrumDataTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hit/spectrum/test/TestOLS.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mixedData/2,4一二氨基嘧啶-甘露醇.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mixedData/乙腈-异丙醇.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mixedData/对氯苯酚-2,4一二氨基嘧啶-磺胺甲嘧啶.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mixedData/无水乙醇-异丙醇-乙酸乙酯.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mixedData/无水乙醇-甲醇.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mixedData/环己烷-乙腈-无水乙醇.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mixedData/环己烷-二甲苯.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mixedData/甘露醇-L-Glutamic acid-磺胺甲嘧啶.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mixedData/甘露醇-磺胺甲嘧啶.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mixedData/磺胺甲嘧啶-L-Glutamic acid.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hit/spectrum/algo/OLS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hit/spectrum/algo/OLS.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/hit/spectrum/test/CommonScript.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hit/spectrum/test/CommonScript.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hit/spectrum/test/TestApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hit/spectrum/test/TestApi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hit/spectrum/test/TestApiParams.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hit/spectrum/test/TestApiParams.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hit/spectrum/test/TestApiRes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hit/spectrum/test/TestApiRes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hit/spectrum/test/TestScript.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hit/spectrum/test/TestScript.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mixedData/mixed_0.5_0.5.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mixedData/mixed_0.8_0.2.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mixedData/mixed_1_1.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hit/spectrum/test/TestApiServer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hit/spectrum/test/TestOLS.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/exam_samples.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/mixed_samples.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/standard_samples.json" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,28 +44,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/zmy/Project/spectrum_analysis/spectrum/src/main/resources/mixedData",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "spring.configuration.checksum": "743bb262648fdcac6c5518898283c220",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/zmy/Project/spectrum_analysis/spectrum/src/main/resources/mixedData&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;743bb262648fdcac6c5518898283c220&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources/mixedData" />
@@ -195,7 +181,8 @@
       <workItem from="1700661254837" duration="9001000" />
       <workItem from="1700729639449" duration="87000" />
       <workItem from="1700730055898" duration="4713000" />
-      <workItem from="1701054345400" duration="10653000" />
+      <workItem from="1701054345400" duration="10924000" />
+      <workItem from="1701152452245" duration="321000" />
     </task>
     <servers />
   </component>
