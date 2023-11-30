@@ -5,14 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ce8af0c8-48bf-4460-946d-d2a718317021" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hit/spectrum/algo/OLSTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hit/spectrum/test/GenerateInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hit/spectrum/test/Info.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hit/spectrum/test/MiddleInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hit/spectrum/test/ModifiedNewtonInteriorPoint.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hit/spectrum/test/Normalization.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hit/spectrum/test/OptimizeTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/hit/spectrum/test/CommonScript.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hit/spectrum/test/CommonScript.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hit/spectrum/test/TestApiServer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hit/spectrum/test/TestOLS.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/data/1.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/data/exam_samples.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/data/mixed_samples.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/data/standard_samples.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hit/spectrum/test/TestMixedData.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hit/spectrum/test/TestScript.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hit/spectrum/test/TestScript.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,6 +81,19 @@
     </key>
   </component>
   <component name="RunManager" selected="Application.TestScript">
+    <configuration name="GenerateInfo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.hit.spectrum.test.GenerateInfo" />
+      <module name="spectrum" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.hit.spectrum.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="IdentificationScript" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.hit.spectrum.test.IdentificationScript" />
       <module name="spectrum" />
@@ -97,19 +113,6 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.hit.spectrum.algo.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestApi" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.hit.spectrum.test.TestApi" />
-      <module name="spectrum" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.hit.spectrum.test.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -146,6 +149,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.TestScript" />
+        <item itemvalue="Application.GenerateInfo" />
         <item itemvalue="Spring Boot.Main" />
         <item itemvalue="Application.OLS" />
         <item itemvalue="Application.IdentificationScript" />
@@ -183,6 +187,8 @@
       <workItem from="1700730055898" duration="4713000" />
       <workItem from="1701054345400" duration="10924000" />
       <workItem from="1701152452245" duration="321000" />
+      <workItem from="1701240832844" duration="5851000" />
+      <workItem from="1701308062822" duration="18519000" />
     </task>
     <servers />
   </component>
@@ -196,6 +202,11 @@
           <url>jar://$MAVEN_REPOSITORY$/org/apache/commons/commons-math3/3.6.1/commons-math3-3.6.1-sources.jar!/org/apache/commons/math3/optim/linear/SimplexSolver.java</url>
           <line>371</line>
           <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/hit/spectrum/test/OptimizeTest.java</url>
+          <line>81</line>
+          <option name="timeStamp" value="17" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -59,7 +59,7 @@ public class TestScript {
 
     private static void testIdentification(){
         List<String> fileNames = CommonScript.getAllFileNames("/Users/zmy/Project/spectrum_analysis/spectrum/src/main/resources/sampleData");
-        String fileName = fileNames.get(2);
+        String fileName = fileNames.get(7);
         String filePath = "/Users/zmy/Project/spectrum_analysis/spectrum/src/main/resources/sampleData/" + fileName;
         try {
             // 1. 加载混合物数据

@@ -6,6 +6,8 @@ import com.alibaba.fastjson.parser.Feature;
 import com.hit.spectrum.algo.*;
 import com.hit.spectrum.data.DataConvertUtils;
 import com.hit.spectrum.data.SpectrumData;
+import org.apache.commons.math3.linear.Array2DRowRealMatrix;
+import org.apache.commons.math3.linear.ArrayRealVector;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -15,6 +17,8 @@ import java.nio.file.attribute.BasicFileAttributes;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+
+import static com.hit.spectrum.test.ModifiedNewtonInteriorPoint.modifiedNewtonInteriorPoint;
 
 public class CommonScript {
     public static List<String> getAllFileNames(String directory) {
@@ -66,7 +70,6 @@ public class CommonScript {
     public static List<DbData> loadDbData(){
         List<String> fileNames = getAllFileNames("/Users/zmy/Project/spectrum_analysis/spectrum/src/main/resources/dbData_fix_param_peak_2");
         List<DbData> res = new ArrayList<>();
-//        double[][] res = new double[fileNames.size()][];
         for(String fileName : fileNames){
             try {
                 String filePath = "/Users/zmy/Project/spectrum_analysis/spectrum/src/main/resources/dbData_fix_param_peak_2/" + fileName;
@@ -103,7 +106,10 @@ public class CommonScript {
         }
 
         // 迭代求解 Ax = b
-        double[] x0 = OLS.operate(A, b, ((double) A.length)/100.0, false);
+//        double[] x0 = OLS.operate(A, b, ((double) A.length)/100.0, false);
+//        double[] x0 = OLSTest.operate(b, A);
+//        double[] x0 = modifiedNewtonInteriorPoint(new Array2DRowRealMatrix(A), new ArrayRealVector(b)).toArray();
+        double[] x0 = OptimizeTest.optimize(A, b);
 
         //根据分布筛选疑似物质
         double[] x = Filter.filterByDistribute(x0);
