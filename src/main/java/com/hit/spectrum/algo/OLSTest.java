@@ -3,6 +3,7 @@ package com.hit.spectrum.algo;
 import org.apache.commons.math3.optim.InitialGuess;
 import org.apache.commons.math3.optim.MaxEval;
 import org.apache.commons.math3.optim.PointValuePair;
+import org.apache.commons.math3.optim.SimpleBounds;
 import org.apache.commons.math3.optim.linear.NonNegativeConstraint;
 import org.apache.commons.math3.optim.nonlinear.scalar.*;
 import org.apache.commons.math3.optim.nonlinear.scalar.noderiv.PowellOptimizer;
@@ -28,7 +29,11 @@ public class OLSTest {
         };
 
         // 设置非负约束
-        NonNegativeConstraint nonNegativeConstraint = new NonNegativeConstraint(false);
+        double[] lb = new double[designMatrix.length];
+        Arrays.fill(lb, 0.0);
+        double[] ub = new double[designMatrix.length];
+        Arrays.fill(ub, 1.0);
+        SimpleBounds simpleBounds = new SimpleBounds(lb, ub);
 
         // 创建优化器
         MultivariateOptimizer optimizer = new PowellOptimizer(1e-3, 1e-3);
@@ -40,7 +45,7 @@ public class OLSTest {
         Arrays.fill(initialGuess, 0.0);
 
         // 运行优化算法
-        PointValuePair result = optimizer.optimize(objective, GoalType.MINIMIZE, new InitialGuess(initialGuess), new MaxEval(2000000), nonNegativeConstraint);
+        PointValuePair result = optimizer.optimize(objective, GoalType.MINIMIZE, new InitialGuess(initialGuess), new MaxEval(2000000), simpleBounds);
 
         // 输出最优参数
         return result.getPoint();

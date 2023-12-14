@@ -3,10 +3,7 @@ package com.hit.spectrum.algo;
 import org.apache.commons.math3.analysis.MultivariateFunction;
 import org.apache.commons.math3.analysis.MultivariateVectorFunction;
 import org.apache.commons.math3.linear.*;
-import org.apache.commons.math3.optim.InitialGuess;
-import org.apache.commons.math3.optim.MaxEval;
-import org.apache.commons.math3.optim.PointValuePair;
-import org.apache.commons.math3.optim.SimpleValueChecker;
+import org.apache.commons.math3.optim.*;
 import org.apache.commons.math3.optim.linear.LinearConstraint;
 import org.apache.commons.math3.optim.linear.LinearConstraintSet;
 import org.apache.commons.math3.optim.linear.Relationship;
@@ -94,6 +91,13 @@ public class OLS {
         MultivariateFunction objectiveFunction = getObjectiveFunction(matrixA, vectorB, lmd, isIter);
         // 定义目标函数的梯度
         MultivariateVectorFunction gradientFunction = getGradFunction(matrixA, vectorB, lmd, isIter);
+
+        // 设置非负约束
+        double[] lb = new double[A.length];
+        Arrays.fill(lb, 0.0);
+        double[] ub = new double[A.length];
+        Arrays.fill(ub, 1.0);
+        SimpleBounds simpleBounds = new SimpleBounds(lb, ub);
 
         GradientMultivariateOptimizer optimizer = new NonLinearConjugateGradientOptimizer(
                 NonLinearConjugateGradientOptimizer.Formula.POLAK_RIBIERE, // 使用 Polak-Ribiere 公式

@@ -8,6 +8,8 @@ import com.hit.spectrum.data.DataConvertUtils;
 import com.hit.spectrum.data.SpectrumData;
 import org.apache.commons.math3.linear.Array2DRowRealMatrix;
 import org.apache.commons.math3.linear.ArrayRealVector;
+import org.apache.commons.math3.linear.RealVector;
+import org.apache.commons.math3.util.FastMath;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -109,8 +111,13 @@ public class CommonScript {
 //        double[] x0 = OLS.operate(A, b, ((double) A.length)/100.0, false);
 //        double[] x0 = OLSTest.operate(b, A);
 //        double[] x0 = modifiedNewtonInteriorPoint(new Array2DRowRealMatrix(A), new ArrayRealVector(b)).toArray();
-        double[] x0 = OptimizeTest.optimize(A, b);
-
+//        double[] x0 = OptimizeTest.optimize(A, b);
+//        double[] x0 = OptimizeTest2.optimize(A, b);
+//        double[] x0 = OptimizeTest3.optimize(A, b);
+//        double[] x0 = OptimizeTest4.optimize(A, b);
+//        double[] x0 = OptimizeTest5.optimize(A, b);
+//        double[] x0 = OptimizeTest6.optimize(A, b);
+        double[] x0 = OptimizeTest7.optimize(A, b);
         //根据分布筛选疑似物质
         double[] x = Filter.filterByDistribute(x0);
 
@@ -127,4 +134,6 @@ public class CommonScript {
         }
         return dbData;
     }
+
+
 }

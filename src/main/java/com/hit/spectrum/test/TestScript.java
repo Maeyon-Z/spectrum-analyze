@@ -59,42 +59,45 @@ public class TestScript {
 
     private static void testIdentification(){
         List<String> fileNames = CommonScript.getAllFileNames("/Users/zmy/Project/spectrum_analysis/spectrum/src/main/resources/sampleData");
-        String fileName = fileNames.get(0);
-        String filePath = "/Users/zmy/Project/spectrum_analysis/spectrum/src/main/resources/sampleData/" + fileName;
-        try {
-            // 1. 加载混合物数据
-            InputStream inputStream = Files.newInputStream(Paths.get(filePath));
-            byte[] bytes = new byte[inputStream.available()];
-            inputStream.read(bytes);
-            String jsonContent = new String(bytes, StandardCharsets.UTF_8);
-            JSONArray jsonArray = JSONArray.parseArray(jsonContent, Feature.OrderedField);
-            Object obj = jsonArray.get(0);
-            JSONObject jsonObject = (JSONObject) obj;
-            List<Double> xData = jsonObject.getJSONArray("raman_shift").toJavaList(Double.class);
-            List<Double> yData = jsonObject.getJSONArray("curve").toJavaList(Double.class);
-            String mixedName = jsonObject.getString("name");
+        for(int k = 0; k < 10; k++){
+            String fileName = fileNames.get(k);
+            String filePath = "/Users/zmy/Project/spectrum_analysis/spectrum/src/main/resources/sampleData/" + fileName;
+            try {
+                // 1. 加载混合物数据
+                InputStream inputStream = Files.newInputStream(Paths.get(filePath));
+                byte[] bytes = new byte[inputStream.available()];
+                inputStream.read(bytes);
+                String jsonContent = new String(bytes, StandardCharsets.UTF_8);
+                JSONArray jsonArray = JSONArray.parseArray(jsonContent, Feature.OrderedField);
+                Object obj = jsonArray.get(0);
+                JSONObject jsonObject = (JSONObject) obj;
+                List<Double> xData = jsonObject.getJSONArray("raman_shift").toJavaList(Double.class);
+                List<Double> yData = jsonObject.getJSONArray("curve").toJavaList(Double.class);
+                String mixedName = jsonObject.getString("name");
 
-            SpectrumData spectrumData = new SpectrumData(xData.subList(params.getStart(), params.getEnd()),
-                    yData.subList(params.getStart(), params.getEnd()), mixedName);
+                SpectrumData spectrumData = new SpectrumData(xData.subList(params.getStart(), params.getEnd()),
+                        yData.subList(params.getStart(), params.getEnd()), mixedName);
 
-            SpectrumData mixedData = new SpectrumData(xData.subList(params.getStart(), params.getEnd()),
-                    CommonScript.pretreatment(spectrumData, params), mixedName);
+                SpectrumData mixedData = new SpectrumData(xData.subList(params.getStart(), params.getEnd()),
+                        CommonScript.pretreatment(spectrumData, params), mixedName);
 
-            mixedData.setCurve(CommonScript.savePeak(mixedData.getCurve(), params));
+                mixedData.setCurve(CommonScript.savePeak(mixedData.getCurve(), params));
 
-            // 2. 组分识别
-            double[] res = CommonScript.identification(mixedData);
+                // 2. 组分识别
+                double[] res = CommonScript.identification(mixedData);
 
-            List<String> dbNames = CommonScript.getAllFileNames("/Users/zmy/Project/spectrum_analysis/spectrum/src/main/resources/dbData_fix_param_peak_2");
-            for(int i = 0; i < res.length; i++){
-                if(res[i] != 0){
-                    System.out.println(i + "-" + res[i] + "-" + dbNames.get(i));
+                List<String> dbNames = CommonScript.getAllFileNames("/Users/zmy/Project/spectrum_analysis/spectrum/src/main/resources/dbData_fix_param_peak_2");
+                for(int i = 0; i < res.length; i++){
+                    if(res[i] != 0){
+                        System.out.println(i + "-" + res[i] + "-" + dbNames.get(i));
+                    }
                 }
+                System.out.println(mixedName);
+            }catch (IOException e){
+                e.printStackTrace();
             }
-            System.out.println(mixedName);
-        }catch (IOException e){
-            e.printStackTrace();
         }
+
     }
 
     public static void main(String[] args) {

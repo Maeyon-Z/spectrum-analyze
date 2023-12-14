@@ -2,7 +2,7 @@ package com.hit.spectrum.test;
 
 import org.apache.commons.math3.linear.*;
 
-import java.util.Arrays;
+import java.util.*;
 
 
 public class OptimizeTest {
@@ -47,6 +47,7 @@ public class OptimizeTest {
         Arrays.fill(x1, lambda);
         RealVector term2 = new ArrayRealVector(x1);
 
+        x1 = x.toArray();
         for (int i = 0; i < x1.length; i++) x1[i] = mu / x1[i];
         RealVector term3 = new ArrayRealVector(x1);
 
@@ -101,14 +102,33 @@ public class OptimizeTest {
         double tolerance = 1e-3;
         double lambda = A.getRowDimension() / 100.0;
 
+        //
+        List<Integer> l = new ArrayList<>();
+
         // 开始迭代优化
         while (k < maxIterations){
+            //remove
+            double[] xTemp = x.toArray();
+            double[][] ATemp = A.getData();
+            List<Integer> ids = new ArrayList<>();
+            for(int i = 0; i < xTemp.length; i++){
+                if(xTemp[i] < 1e-5){
+                    if(i == 0){
+                        System.out.println(123);
+                    }
+                    ids.add(i);
+                    l.add(i);
+                }
+            }
+            if(ids.size() != 0){
+                A = new Array2DRowRealMatrix(remove2(ATemp, ids));
+                x = new ArrayRealVector(remove1(xTemp, ids));
+            }
+
             alpha = 1.0;
             // 如果 delta < tolerance 则结束，x为最终结果，否则继续计算
             double delta = calculateDelta(A, y, x, lambda);
             if(delta < tolerance) break;
-
-            System.out.println(k + "-" + delta);
 
             // 确定迭代方向
             RealVector gradPhi = calculateGradient(A, y, x, lambda, delta/A.getRowDimension());
@@ -127,11 +147,43 @@ public class OptimizeTest {
         return x.toArray();
     }
 
-    private static boolean judge(double[] x, double[] dx, double alpha) {
-        for (int i = 0; i < x.length; i++) {
-            if((x[i] + dx[i] * alpha) < 0) return false;
+    private static double[][] remove2(double[][] aTemp, List<Integer> ids) {
+        double[][] res = new double[aTemp.length - ids.size()][aTemp[0].length];
+        int k = 0;
+        for(int i = 0; i < aTemp.length; i++){
+            if(!ids.contains(i))
+                res[k++] = aTemp[i];
         }
-        return true;
+        return res;
     }
 
+    private static double[] remove1(double[] xTemp, List<Integer> ids) {
+        double[] res = new double[xTemp.length - ids.size()];
+        int k = 0;
+        for(int i = 0; i < xTemp.length; i++){
+            if(!ids.contains(i))
+                res[k++] = xTemp[i];
+        }
+        return res;
+    }
+
+    private static double findMin(double[] x) {
+        double min = x[0];
+        for (int i = 1; i < x.length; i++) {
+            if(x[i] < min) min = x[i];
+        }
+        return min;
+    }
+
+
+    public static double[] optimize2(double[][] A1, double[] y1) {
+        RealMatrix A = new Array2DRowRealMatrix(A1);
+        RealVector y = new ArrayRealVector(y1);
+        SingularValueDecomposition svd = new SingularValueDecomposition(A);
+        RealMatrix pseudoInverse = svd.getSolver().getInverse();
+
+        // 计算最小二乘解
+        RealVector x = pseudoInverse.preMultiply(y);
+        return x.toArray();
+    }
 }

@@ -5,7 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ce8af0c8-48bf-4460-946d-d2a718317021" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hit/spectrum/test/OptimizeTest2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hit/spectrum/test/OptimizeTest3.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hit/spectrum/test/OptimizeTest4.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hit/spectrum/test/OptimizeTest5.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hit/spectrum/test/OptimizeTest6.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hit/spectrum/test/OptimizeTest7.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hit/spectrum/algo/OLS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hit/spectrum/algo/OLS.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hit/spectrum/algo/OLSTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hit/spectrum/algo/OLSTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hit/spectrum/test/CommonScript.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hit/spectrum/test/CommonScript.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/hit/spectrum/test/OptimizeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hit/spectrum/test/OptimizeTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/hit/spectrum/test/TestScript.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hit/spectrum/test/TestScript.java" afterDir="false" />
     </list>
@@ -39,28 +49,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/zmy/Project/spectrum_analysis/spectrum/src/main/resources/mixedData&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;743bb262648fdcac6c5518898283c220&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/Users/zmy/Project/spectrum_analysis/spectrum/src/main/resources/mixedData",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "MavenSettings",
+    "spring.configuration.checksum": "743bb262648fdcac6c5518898283c220",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources/mixedData" />
@@ -86,12 +97,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="IdentificationScript" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.hit.spectrum.test.IdentificationScript" />
+    <configuration name="OLS" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.hit.spectrum.algo.OLS" />
       <module name="spectrum" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.hit.spectrum.test.*" />
+          <option name="PATTERN" value="com.hit.spectrum.algo.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -99,12 +110,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="OLS" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.hit.spectrum.algo.OLS" />
+    <configuration name="OptimizeTest3" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.hit.spectrum.test.OptimizeTest3" />
       <module name="spectrum" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.hit.spectrum.algo.*" />
+          <option name="PATTERN" value="com.hit.spectrum.test.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -141,10 +152,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.TestScript" />
-        <item itemvalue="Application.GenerateInfo" />
         <item itemvalue="Spring Boot.Main" />
+        <item itemvalue="Application.OptimizeTest3" />
+        <item itemvalue="Application.GenerateInfo" />
         <item itemvalue="Application.OLS" />
-        <item itemvalue="Application.IdentificationScript" />
       </list>
     </recent_temporary>
   </component>
@@ -182,7 +193,9 @@
       <workItem from="1701240832844" duration="5851000" />
       <workItem from="1701308062822" duration="28147000" />
       <workItem from="1701677370508" duration="11300000" />
-      <workItem from="1701697716253" duration="2436000" />
+      <workItem from="1701697716253" duration="3182000" />
+      <workItem from="1701767133110" duration="379000" />
+      <workItem from="1701768031831" duration="72727000" />
     </task>
     <servers />
   </component>
@@ -193,9 +206,84 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$MAVEN_REPOSITORY$/org/apache/commons/commons-math3/3.6.1/commons-math3-3.6.1-sources.jar!/org/apache/commons/math3/optim/linear/SimplexSolver.java</url>
-          <line>371</line>
-          <option name="timeStamp" value="2" />
+          <url>file://$PROJECT_DIR$/src/main/java/com/hit/spectrum/test/OptimizeTest2.java</url>
+          <line>70</line>
+          <option name="timeStamp" value="29" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/hit/spectrum/algo/OLSTest.java</url>
+          <line>47</line>
+          <option name="timeStamp" value="30" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/hit/spectrum/test/OptimizeTest3.java</url>
+          <line>42</line>
+          <option name="timeStamp" value="34" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/hit/spectrum/test/OptimizeTest4.java</url>
+          <line>53</line>
+          <option name="timeStamp" value="56" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/apache/commons/commons-math3/3.6.1/commons-math3-3.6.1-sources.jar!/org/apache/commons/math3/optim/nonlinear/scalar/noderiv/CMAESOptimizer.java</url>
+          <line>454</line>
+          <option name="timeStamp" value="57" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/apache/commons/commons-math3/3.6.1/commons-math3-3.6.1-sources.jar!/org/apache/commons/math3/optim/nonlinear/scalar/noderiv/CMAESOptimizer.java</url>
+          <line>460</line>
+          <option name="timeStamp" value="58" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/apache/commons/commons-math3/3.6.1/commons-math3-3.6.1-sources.jar!/org/apache/commons/math3/optim/nonlinear/scalar/noderiv/CMAESOptimizer.java</url>
+          <line>469</line>
+          <option name="timeStamp" value="60" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/apache/commons/commons-math3/3.6.1/commons-math3-3.6.1-sources.jar!/org/apache/commons/math3/optim/nonlinear/scalar/noderiv/CMAESOptimizer.java</url>
+          <line>474</line>
+          <option name="timeStamp" value="61" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/apache/commons/commons-math3/3.6.1/commons-math3-3.6.1-sources.jar!/org/apache/commons/math3/optim/nonlinear/scalar/noderiv/CMAESOptimizer.java</url>
+          <line>482</line>
+          <option name="timeStamp" value="62" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/apache/commons/commons-math3/3.6.1/commons-math3-3.6.1-sources.jar!/org/apache/commons/math3/optim/nonlinear/scalar/noderiv/CMAESOptimizer.java</url>
+          <line>486</line>
+          <option name="timeStamp" value="63" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/apache/commons/commons-math3/3.6.1/commons-math3-3.6.1-sources.jar!/org/apache/commons/math3/optim/nonlinear/scalar/noderiv/CMAESOptimizer.java</url>
+          <line>490</line>
+          <option name="timeStamp" value="64" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/apache/commons/commons-math3/3.6.1/commons-math3-3.6.1-sources.jar!/org/apache/commons/math3/optim/nonlinear/scalar/noderiv/CMAESOptimizer.java</url>
+          <line>499</line>
+          <option name="timeStamp" value="65" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/hit/spectrum/test/OptimizeTest5.java</url>
+          <line>64</line>
+          <option name="timeStamp" value="69" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/hit/spectrum/test/OptimizeTest5.java</url>
+          <line>91</line>
+          <option name="timeStamp" value="71" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/apache/commons/commons-math3/3.6.1/commons-math3-3.6.1-sources.jar!/org/apache/commons/math3/fitting/leastsquares/EvaluationRmsChecker.java</url>
+          <line>68</line>
+          <option name="timeStamp" value="72" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/hit/spectrum/test/OptimizeTest7.java</url>
+          <line>50</line>
+          <option name="timeStamp" value="87" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
