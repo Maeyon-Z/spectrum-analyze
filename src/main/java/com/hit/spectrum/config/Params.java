@@ -15,4 +15,10 @@ public class Params {
     public static final Double lambdaB = 1000.0;
 
     public static final Integer width = 5;
+
+    public static final String dbUrl = "jdbc:mysql://localhost:3306/spectrum?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true&serverTimezone=GMT%2B8";
+
+    public static final String user = "spectrum";
+
+    public static final String password = "xgGRt2152GBnmVbPKjh";
 }

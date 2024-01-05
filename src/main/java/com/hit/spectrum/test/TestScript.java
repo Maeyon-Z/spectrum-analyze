@@ -4,7 +4,6 @@ import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import com.alibaba.fastjson.parser.Feature;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.hit.spectrum.data.SpectrumData;
 
 import java.io.File;
 import java.io.IOException;
@@ -58,10 +57,12 @@ public class TestScript {
     }
 
     private static void testIdentification(){
-        List<String> fileNames = CommonScript.getAllFileNames("/Users/zmy/Project/spectrum_analysis/spectrum/src/main/resources/sampleData");
+        List<String> fileNames = CommonScript.getAllFileNames("/Users/zmy/Project/spectrum_analysis/spectrum/src/main/resources/mixedData");
         for(int k = 0; k < 10; k++){
+            long begin = System.currentTimeMillis();
             String fileName = fileNames.get(k);
-            String filePath = "/Users/zmy/Project/spectrum_analysis/spectrum/src/main/resources/sampleData/" + fileName;
+            System.out.println("样品: " + fileName);
+            String filePath = "/Users/zmy/Project/spectrum_analysis/spectrum/src/main/resources/mixedData/" + fileName;
             try {
                 // 1. 加载混合物数据
                 InputStream inputStream = Files.newInputStream(Paths.get(filePath));
@@ -87,12 +88,13 @@ public class TestScript {
                 double[] res = CommonScript.identification(mixedData);
 
                 List<String> dbNames = CommonScript.getAllFileNames("/Users/zmy/Project/spectrum_analysis/spectrum/src/main/resources/dbData_fix_param_peak_2");
+                System.out.println("检测结果:");
                 for(int i = 0; i < res.length; i++){
                     if(res[i] != 0){
-                        System.out.println(i + "-" + res[i] + "-" + dbNames.get(i));
+                        System.out.println("  物质：" + dbNames.get(i) + "，含量：" + res[i] );
                     }
                 }
-                System.out.println(mixedName);
+                System.out.println("时长:" + (System.currentTimeMillis() - begin)/1000 + "秒");
             }catch (IOException e){
                 e.printStackTrace();
             }

@@ -1,4 +1,4 @@
-package com.hit.spectrum.test;
+package com.hit.spectrum.algo;
 
 public class Normalization {
     // 寻找数组中的最小值

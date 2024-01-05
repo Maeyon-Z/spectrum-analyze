@@ -1,15 +1,8 @@
 package com.hit.spectrum.test;
 
-import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
-import com.alibaba.fastjson.parser.Feature;
 import com.hit.spectrum.algo.*;
 import com.hit.spectrum.data.DataConvertUtils;
-import com.hit.spectrum.data.SpectrumData;
-import org.apache.commons.math3.linear.Array2DRowRealMatrix;
-import org.apache.commons.math3.linear.ArrayRealVector;
-import org.apache.commons.math3.linear.RealVector;
-import org.apache.commons.math3.util.FastMath;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -19,8 +12,6 @@ import java.nio.file.attribute.BasicFileAttributes;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-
-import static com.hit.spectrum.test.ModifiedNewtonInteriorPoint.modifiedNewtonInteriorPoint;
 
 public class CommonScript {
     public static List<String> getAllFileNames(String directory) {
@@ -116,8 +107,9 @@ public class CommonScript {
 //        double[] x0 = OptimizeTest3.optimize(A, b);
 //        double[] x0 = OptimizeTest4.optimize(A, b);
 //        double[] x0 = OptimizeTest5.optimize(A, b);
-//        double[] x0 = OptimizeTest6.optimize(A, b);
-        double[] x0 = OptimizeTest7.optimize(A, b);
+        double[] x0 = OptimizeTest6.optimize(A, b);
+//        double[] x0 = OptimizeTest6_1.optimize(A, b);
+//        double[] x0 = OptimizeTest7.optimize(A, b);
         //根据分布筛选疑似物质
         double[] x = Filter.filterByDistribute(x0);
 

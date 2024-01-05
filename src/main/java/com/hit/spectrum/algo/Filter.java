@@ -21,6 +21,7 @@ public class Filter {
         System.arraycopy(b, 0, res, 0, b.length);
         double[][] t = new double[i+1][B[0].length];
         System.arraycopy(B, 0, t, 0, i + 1);
+//        double[] xt = Optimize.optimize(t, b);
         double[] xt = OLS.operate(t, b, ((double) t.length)/100.0, true);
         for (int j = 0; j < xt.length ; j++) {
             for (int k = 0; k < res.length; k++) {

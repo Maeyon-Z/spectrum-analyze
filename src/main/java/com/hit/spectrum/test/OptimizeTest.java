@@ -1,5 +1,6 @@
 package com.hit.spectrum.test;
 
+import com.hit.spectrum.algo.Normalization;
 import org.apache.commons.math3.linear.*;
 
 import java.util.*;

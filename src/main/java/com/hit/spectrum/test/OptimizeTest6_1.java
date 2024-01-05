@@ -4,12 +4,11 @@ import com.hit.spectrum.algo.Normalization;
 import org.apache.commons.math3.linear.*;
 import org.apache.commons.math3.util.FastMath;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 
-public class OptimizeTest6 {
+public class OptimizeTest6_1 {
 
     public enum Decomposition {
         SVD {
@@ -32,33 +31,14 @@ public class OptimizeTest6 {
             A1[i] = Normalization.normalize(A1[i]);
         }
 
-        OptimizeTest6.Decomposition decomposition = OptimizeTest6.Decomposition.SVD;
+        OptimizeTest6_1.Decomposition decomposition = OptimizeTest6_1.Decomposition.SVD;
         double[] x1 = new double[A1.length];
         Arrays.fill(x1, 1.0);
         RealVector previousResiduals = null;
         Integer maxIterations = 200000, iter = 0;
-        double tol = 1e-2;
-
-        List<Integer> l = new ArrayList<>();
-        List<Integer> t = new ArrayList<>();
+        double tol = 1e-3;
 
         while (true) {
-            //remove
-            if(x1.length > 10 && iter != 0){
-                List<Integer> ids = new ArrayList<>();
-                for(int i = 0; i < x1.length; i++){
-                    if(x1[i] < 1e-3){
-                        ids.add(i);
-                        l.add(i);
-                    }
-                }
-                if(ids.size() != 0){
-                    t.add(ids.size());
-                    A1 = remove2(A1, ids);
-                    x1 = remove1(x1, ids);
-                }
-            }
-
 
             RealMatrix A = new Array2DRowRealMatrix(A1);
             RealVector y = new ArrayRealVector(y1);
@@ -73,39 +53,12 @@ public class OptimizeTest6 {
             }
 
             RealVector dX = decomposition.solve(weightedJacobian, currentResiduals);
-            while (check(x.toArray(), dX.toArray())){
-                dX.mapMultiplyToSelf(0.5);
-            }
 
             x1 = x.add(dX).toArray();
             previousResiduals = currentResiduals;
             iter ++;
         }
 
-
-        List<List<Integer>> ll = new ArrayList<>();
-        int begin = 0;
-        for(int i = 0; i < t.size(); i++){
-            int end = t.get(i) + begin;
-            ll.add(l.subList(begin, end));
-            begin = end;
-        }
-        for(int i = ll.size() - 1; i >= 0; i--){
-            List<Integer> lll = ll.get(i);
-            double[] d = new double[x1.length + lll.size()];
-            Arrays.fill(d, 1.0);
-            for (int j = 0; j < lll.size(); j++){
-                d[lll.get(j)] = 0.0;
-            }
-            int k = 0, j = 0;
-            while(j < x1.length){
-                while (d[k] == 0.0) k++;
-                d[k] = x1[j];
-                k++;
-                j++;
-            }
-            x1 = d;
-        }
 
         return x1;
     }

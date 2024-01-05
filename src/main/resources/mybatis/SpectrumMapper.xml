@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hit.spectrum.mapper.SpectrumMapper">
+    
+    <resultMap type="SpectrumDbData" id="BaseResult">
+        <result property="id"    column="id"    />
+        <result property="name"    column="name"    />
+        <result property="origin"    column="origin"    />
+        <result property="smoothOne"    column="smooth_one"    />
+        <result property="background"    column="background"    />
+        <result property="corrected"    column="corrected"    />
+        <result property="smoothTwo"    column="smooth_two"    />
+        <result property="fixPeak"    column="fix_peak"    />
+        <result property="normalized"    column="normalized"    />
+    </resultMap>
+
+
+</mapper>

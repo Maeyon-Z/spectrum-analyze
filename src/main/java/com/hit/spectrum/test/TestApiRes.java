@@ -1,6 +1,5 @@
 package com.hit.spectrum.test;
 
-import com.hit.spectrum.data.SpectrumData;
 import lombok.Data;
 
 import java.util.List;

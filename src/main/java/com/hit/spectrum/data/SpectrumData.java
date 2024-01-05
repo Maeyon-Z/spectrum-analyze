@@ -1,29 +1,26 @@
 package com.hit.spectrum.data;
 
-import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
 import java.util.List;
 
 @Data
-@AllArgsConstructor
-@NoArgsConstructor
 public class SpectrumData {
+    private Long id;
 
-    /**
-     * 横坐标
-     */
-    private List<Double> ramanShift;
-
-    /**
-     * 纵坐标
-     */
-    private List<Double> curve;
-
-    /**
-     * 样品名称
-     */
     private String name;
 
+    private List<Double> origin;
+
+    private List<Double> smoothOne;
+
+    private List<Double> background;
+
+    private List<Double> corrected;
+
+    private List<Double> smoothTwo;
+
+    private List<Double> fixPeak;
+
+    private List<Double> normalized;
 }

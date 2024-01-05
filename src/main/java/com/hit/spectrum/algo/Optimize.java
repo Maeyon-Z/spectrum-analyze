@@ -1,29 +1,42 @@
-package com.hit.spectrum.test;
+package com.hit.spectrum.algo;
 
-import com.hit.spectrum.algo.Normalization;
 import org.apache.commons.math3.linear.*;
+import org.apache.commons.math3.util.FastMath;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 
-public class OptimizeTest7 {
+public class Optimize {
+
+    public enum Decomposition {
+        SVD {
+            @Override
+            protected RealVector solve(final RealMatrix jacobian,
+                                       final RealVector residuals) {
+                return new SingularValueDecomposition(jacobian)
+                        .getSolver()
+                        .solve(residuals);
+            }
+        };
+
+        protected abstract RealVector solve(RealMatrix jacobian,
+                                            RealVector residuals);
+    }
 
     public static double[] optimize(double[][] A1, double[] y1) {
-        y1 = Normalization.normalize(y1);
-        for (int i = 0; i < A1.length; i++) {
-            A1[i] = Normalization.normalize(A1[i]);
-        }
-
+        Optimize.Decomposition decomposition = Optimize.Decomposition.SVD;
         double[] x1 = new double[A1.length];
         Arrays.fill(x1, 1.0);
+        RealVector previousResiduals = null;
+        Integer maxIterations = 200000, iter = 0;
+        double tol = 1e-2;
 
         List<Integer> l = new ArrayList<>();
         List<Integer> t = new ArrayList<>();
-        int iter = 0;
 
-        while(true){
+        while (true) {
             //remove
             if(x1.length > 10 && iter != 0){
                 List<Integer> ids = new ArrayList<>();
@@ -40,20 +53,29 @@ public class OptimizeTest7 {
                 }
             }
 
-            Array2DRowRealMatrix A = new Array2DRowRealMatrix(A1);
-            RealVector x = new ArrayRealVector(x1);
+
+            RealMatrix A = new Array2DRowRealMatrix(A1);
             RealVector y = new ArrayRealVector(y1);
+            RealVector x = new ArrayRealVector(x1);
 
-            double object = getObjectValue(A, x, y);
-            if(object < 10) break;
-            RealVector grad = getGradient(A, x, y);
+            RealVector currentResiduals = A.preMultiply(x).subtract(y).mapMultiply(-1.0);
+            RealMatrix weightedJacobian = A.transpose();
 
-            while(check(x, grad) || object <= getObjectValue(A, x.add(grad), y))
-                grad.mapMultiplyToSelf(0.9);
+            // Check convergence.
+            if (previousResiduals != null && FastMath.abs(getRMS(currentResiduals) - getRMS(previousResiduals)) <= tol) {
+                break;
+            }
 
-            x1 = x.add(grad).toArray();
-            iter++;
+            RealVector dX = decomposition.solve(weightedJacobian, currentResiduals);
+            while (check(x.toArray(), dX.toArray())){
+                dX.mapMultiplyToSelf(0.5);
+            }
+
+            x1 = x.add(dX).toArray();
+            previousResiduals = currentResiduals;
+            iter ++;
         }
+
 
         List<List<Integer>> ll = new ArrayList<>();
         int begin = 0;
@@ -82,20 +104,18 @@ public class OptimizeTest7 {
         return x1;
     }
 
-    private static boolean check(RealVector x, RealVector grad){
-        double[] t = x.add(grad).toArray();
-        for (double v : t) {
-            if (v < 0) return true;
+    public static double getRMS(RealVector residuals){
+        double cost = FastMath.sqrt(residuals.dotProduct(residuals));
+        return FastMath.sqrt(cost * cost / residuals.getDimension());
+    }
+
+    private static boolean check(double[] cur, double[] dx){
+        for (int i = 0; i < cur.length; i++){
+            if(cur[i] + dx[i] < 0){
+                return true;
+            }
         }
         return false;
-    }
-
-    private static double getObjectValue(RealMatrix A, RealVector x, RealVector y){
-        return A.preMultiply(x).subtract(y).getNorm();
-    }
-
-    private static RealVector getGradient(RealMatrix A, RealVector x, RealVector y){
-        return A.transpose().preMultiply(A.preMultiply(x).subtract(y)).mapMultiplyToSelf(-1.0);
     }
 
     private static double[][] remove2(double[][] aTemp, List<Integer> ids) {
