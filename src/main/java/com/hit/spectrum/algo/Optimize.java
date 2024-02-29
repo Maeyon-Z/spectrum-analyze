@@ -15,7 +15,7 @@ public class Optimize {
             @Override
             protected RealVector solve(final RealMatrix jacobian,
                                        final RealVector residuals) {
-                return new SingularValueDecomposition(jacobian)
+                return new QRDecomposition(jacobian)
                         .getSolver()
                         .solve(residuals);
             }

@@ -5,61 +5,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ce8af0c8-48bf-4460-946d-d2a718317021" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/sql/data.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sql/init.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hit/spectrum/Api.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hit/spectrum/algo/Optimize.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hit/spectrum/data/SpectrumDb.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hit/spectrum/data/SpectrumDbData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hit/spectrum/test/IdenTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hit/spectrum/test/InputTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hit/spectrum/test/ManageTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hit/spectrum/test/OptimizeTest6_1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hit/spectrum/test/SpectrumData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mybatis/SpectrumMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mybatis/mybatis-config.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spectrum.iml" beforeDir="false" afterPath="$PROJECT_DIR$/spectrum.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hit/spectrum/algo/Filter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hit/spectrum/algo/Filter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hit/spectrum/algo/OLSTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hit/spectrum/config/Params.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hit/spectrum/config/Params.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hit/spectrum/data/SpectrumData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hit/spectrum/data/SpectrumData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hit/spectrum/data/SpectrumDataLoader.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hit/spectrum/service/SpectrumService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hit/spectrum/service/SpectrumService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hit/spectrum/test/CommonScript.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hit/spectrum/test/CommonScript.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hit/spectrum/test/GenerateInfo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hit/spectrum/test/Normalization.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hit/spectrum/algo/Normalization.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hit/spectrum/test/OptimizeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hit/spectrum/test/OptimizeTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hit/spectrum/test/OptimizeTest2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hit/spectrum/test/OptimizeTest2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hit/spectrum/test/OptimizeTest6.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hit/spectrum/test/OptimizeTest6.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hit/spectrum/test/OptimizeTest7.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hit/spectrum/test/OptimizeTest7.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hit/spectrum/test/TestApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hit/spectrum/test/TestApi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hit/spectrum/test/TestApiRes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hit/spectrum/test/TestApiRes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hit/spectrum/Api.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hit/spectrum/Api.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hit/spectrum/algo/Optimize.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hit/spectrum/algo/Optimize.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hit/spectrum/algo/Whittaker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hit/spectrum/algo/Whittaker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hit/spectrum/test/IdenTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hit/spectrum/test/IdenTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/hit/spectrum/test/TestScript.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hit/spectrum/test/TestScript.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application-dev.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/dbData_fix_param_peak_2/Cleanert PSA.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/dbData_fix_param_peak_2/PBS磷酸盐缓冲液.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/dbData_fix_param_peak_2/Triacontane.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/dbData_fix_param_peak_2/copperbromide.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/dbData_fix_param_peak_2/lead dioxide.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/dbData_fix_param_peak_2/双硫腙.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/dbData_fix_param_peak_2/正丙醇.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/dbData_fix_param_peak_2/正丙醇.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/dbData_fix_param_peak_2/氟化钠.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/dbData_fix_param_peak_2/氢氧化钾.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/dbData_fix_param_peak_2/氨水.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/dbData_fix_param_peak_2/氯化钠.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/dbData_fix_param_peak_2/氯化锰(II)四水化合物.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/dbData_fix_param_peak_2/氯化锶.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/dbData_fix_param_peak_2/溴化钠.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/dbData_fix_param_peak_2/溴化钾.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/dbData_fix_param_peak_2/硅溶液.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/dbData_fix_param_peak_2/硝酸银标准溶液.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/dbData_fix_param_peak_2/硫酸亚铁.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/dbData_fix_param_peak_2/磷酸二氢铵.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/dbData_fix_param_peak_2/磷酸盐缓冲液.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/dbData_fix_param_peak_2/过氧化氢.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/Cleanert PSA.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/PBS磷酸盐缓冲液.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/Triacontane.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/copperbromide.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/lead dioxide.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/双硫腙.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/氟化钠.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/氢氧化钾.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/氨水.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/氯化钠.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/氯化锰(II)四水化合物.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/氯化锶.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/溴化钠.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/溴化钾.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/硅溶液.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/硝酸银标准溶液.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/硫酸亚铁.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/磷酸二氢铵.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/磷酸盐缓冲液.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sampleData/过氧化氢.json" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,29 +62,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/zmy/Project/spectrum_analysis/spectrum/src/main/resources/mybatis",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "MavenSettings",
-    "spring.configuration.checksum": "743bb262648fdcac6c5518898283c220",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/zmy/Project/spectrum_analysis/spectrum/src/main/resources/mybatis&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;743bb262648fdcac6c5518898283c220&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources/mybatis" />
@@ -127,7 +98,7 @@
       <recent name="com.hit.spectrum.test" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.ManageTest">
+  <component name="RunManager" selected="Application.IdenTest">
     <configuration name="IdenTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.hit.spectrum.test.IdenTest" />
       <module name="spectrum" />
@@ -172,7 +143,7 @@
       <module name="spectrum" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.hit.spectrum.algo.*" />
+          <option name="PATTERN" value="com.hit.spectrum.test.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -180,12 +151,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+    <configuration name="Whittaker" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.hit.spectrum.algo.Whittaker" />
       <module name="spectrum" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.hit.spectrum.Main" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.hit.spectrum.*" />
+          <option name="PATTERN" value="com.hit.spectrum.algo.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -195,11 +166,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.ManageTest" />
         <item itemvalue="Application.IdenTest" />
-        <item itemvalue="Application.InputTest" />
-        <item itemvalue="Spring Boot.Main" />
         <item itemvalue="Application.TestScript" />
+        <item itemvalue="Application.Whittaker" />
+        <item itemvalue="Application.ManageTest" />
+        <item itemvalue="Application.InputTest" />
       </list>
     </recent_temporary>
   </component>
@@ -243,7 +214,9 @@
       <workItem from="1703122089309" duration="1272000" />
       <workItem from="1703493147680" duration="3137000" />
       <workItem from="1704162459039" duration="9596000" />
-      <workItem from="1704332876618" duration="17660000" />
+      <workItem from="1704332876618" duration="23802000" />
+      <workItem from="1705021697394" duration="1973000" />
+      <workItem from="1708311287001" duration="19456000" />
     </task>
     <servers />
   </component>

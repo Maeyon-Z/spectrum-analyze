@@ -40,10 +40,20 @@ public class Whittaker {
         // 计算平滑器
         RealMatrix w = D.transpose().multiply(D).scalarMultiply(lmd).add(W);
 
+        long begin = System.currentTimeMillis();
+
         //LU分解求值
-        LUDecomposition lu = new LUDecomposition(w);
+//        LUDecomposition lu = new LUDecomposition(w);
+//        RealVector v = new ArrayRealVector(DataConvertUtils.list2Array(originData));
+//        RealVector res = lu.getSolver().solve(W.operate(v));
+
+        //QR分解
+        QRDecomposition qr = new QRDecomposition(w);
         RealVector v = new ArrayRealVector(DataConvertUtils.list2Array(originData));
-        RealVector res = lu.getSolver().solve(W.operate(v));
+        RealVector res = qr.getSolver().solve(W.operate(v));
+
+        System.out.println("==时长:" + (System.currentTimeMillis() - begin)/1000 + "秒");
+
         return DataConvertUtils.array2List(res.toArray());
     }
 }

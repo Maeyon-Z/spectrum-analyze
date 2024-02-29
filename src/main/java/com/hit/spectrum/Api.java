@@ -1,8 +1,6 @@
 package com.hit.spectrum;
 
-import com.hit.spectrum.data.DataConvertUtils;
 import com.hit.spectrum.data.SpectrumData;
-import com.hit.spectrum.data.SpectrumDbData;
 import com.hit.spectrum.service.SpectrumService;
 
 import java.util.List;
@@ -38,7 +36,7 @@ public class Api {
     }
 
     /**
-     * 根据id获取某一个纯净物的数据
+     * 根据id获取某一个纯净物的数据 todo 存在bug
      * @return
      */
     public SpectrumData getStandardById(Long id){

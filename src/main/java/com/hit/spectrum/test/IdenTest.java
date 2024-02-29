@@ -16,12 +16,12 @@ public class IdenTest {
 
     public static void main(String[] args) {
         Api api = new Api();
-        List<String> fileNames = CommonScript.getAllFileNames("/Users/zmy/Project/spectrum_analysis/spectrum/src/main/resources/mixedData");
+        List<String> fileNames = CommonScript.getAllFileNames("/Users/zmy/Project/spectrum_analysis/spectrum/src/main/resources/sampleData");
         for(int k = 0; k < 10; k++){
             long begin = System.currentTimeMillis();
             String fileName = fileNames.get(k);
             System.out.println("样品: " + fileName);
-            String filePath = "/Users/zmy/Project/spectrum_analysis/spectrum/src/main/resources/mixedData/" + fileName;
+            String filePath = "/Users/zmy/Project/spectrum_analysis/spectrum/src/main/resources/sampleData/" + fileName;
             try {
                 // 1. 加载混合物数据
                 InputStream inputStream = Files.newInputStream(Paths.get(filePath));
